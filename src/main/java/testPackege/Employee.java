@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
+
     private String getRandomTestMail(int domainLength) {
         String randomString = RandomString.make(domainLength);
         return randomString + "@testmail.com";

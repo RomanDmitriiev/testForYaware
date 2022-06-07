@@ -1,6 +1,7 @@
 package test;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -92,7 +93,7 @@ public class Locators {
     public void checkInviteEmail() {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         String firstData = dataOfInvitation.getText();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         sendInviteEmailAgainButton.click();
         wait.until(ExpectedConditions.visibilityOf(successfulInviteMessage));
         Assert.assertTrue(successfulInviteMessage.isDisplayed());

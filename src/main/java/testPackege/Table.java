@@ -9,6 +9,7 @@ import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
 
 public class Table {
+
     public void createCsvFile(int numberOfEmployee) throws IOException {
         Employee employee = new Employee();
         String csv = "Employee_list.csv";
@@ -25,7 +26,6 @@ public class Table {
         CSVReader reader = new CSVReader(new FileReader("Employee_list.csv"), ',', '"', 1);
         String[] nextLine = reader.readNext();
         String firstRow = Arrays.toString(nextLine);
-        System.out.println(firstRow);
         return firstRow;
     }
 }
